@@ -2,8 +2,8 @@
   "name": "johnny5",
   "version": "0.0.0",
   "private": true,
-  "author": "john@johnwgennell.com",
-  "description": "Hello, I am johnny5 and I am not here to help you ;P",
+  "author": "jgennell@hubspot.com",
+  "description": "A simple helpful robot for your Company",
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
