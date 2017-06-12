@@ -4,17 +4,12 @@ module.exports = function(robot) {
     });
 }
 
-bot.respond(/What's your favorite food?/, function(res) {
-  return res.send("Dynamite, boi.");
-});
+bot.respond(/add (.*) and (.*)/i, function(msg) {
+  var a;
+  var b;
+  a = parseInt(msg.match[1]);
+  b = parseInt(msg.match[2]);
+  c = a + b
 
-bot.respond(/Hi johnny5! My name is (.*)/i, function(msg) {
-  var name;
-  name = msg.match[1];
-  if (name == "johnny5"){
-    return msg.send("You're not johnny5--I'm johnny5!");
-  } else {
-    return msg.reply("Nice to meet you, " + name + "!");
-  }
-
+  return msg.reply(a + " plus " + b + " = " + c);
 });
