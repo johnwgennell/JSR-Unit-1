@@ -46,12 +46,6 @@ bot.respond(/Hi johnny5! My name is (.*)/i, function(msg) {
   }
 });
 
-/* 7) Hears "how does this work?" and messages room and user */
-robot.respond /How does this work?/i, (res) ->
-    room =  'general'
-    robot.messageRoom room, "Is don't know what you're talking about. Ask Tyler."
-    res.reply  "You could ask Sonyl too, just don't ask me."
-
 /* 8) Switch statement to cover various questions */
 bot.respond(/what is your favorite (.*)/, function(msg) {
   var fav;
