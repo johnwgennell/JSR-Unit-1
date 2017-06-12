@@ -24,7 +24,7 @@ module.exports = function(robot) {
     });
 }
 
-
+/*
 // 6) Switch statement to cover various questions
 module.exports = function(bot) {
     bot.respond(/what is your favorite (.*)/, function(msg) {
@@ -47,3 +47,4 @@ fav = matches[1];
       return msg.reply("You're my favorite " + fav + ". Am I yours?");
   }
 });
+*/
