@@ -29,8 +29,3 @@ bot.respond(/add (.*) and (.*)/i, function(msg) {
 
   return msg.reply(a + " plus " + b + " = " + c);
 });
-
-/* 5) Responds to favorite food */
-bot.respond(/What's your favorite food?/, function(res) {
-  return res.send("Nitroglycerin!");
-});
