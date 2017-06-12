@@ -18,3 +18,19 @@ module.exports = function(robot) {
       return res.send("It's always sunny in Philadelphia.");
     });
 }
+
+/* 4) Adds two numbers together */
+bot.respond(/add (.*) and (.*)/i, function(msg) {
+  var a;
+  var b;
+  a = parseInt(msg.match[1]);
+  b = parseInt(msg.match[2]);
+  c = a + b
+
+  return msg.reply(a + " plus " + b + " = " + c);
+});
+
+/* 5) Responds to favorite food */
+bot.respond(/What's your favorite food?/, function(res) {
+  return res.send("Nitroglycerin!");
+});
