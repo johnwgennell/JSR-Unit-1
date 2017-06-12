@@ -24,30 +24,10 @@ module.exports = function(robot) {
     });
 }
 
-module.exports = (robot) ->
-  robot.hear /badger/i, (res) ->
-    res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-
-  robot.respond /open the pod bay doors/i, (res) ->
-    res.reply "I'm afraid I can't let you do that."
-
-  robot.hear /I like pie/i, (res) ->
-    res.emote "makes a freshly baked pie"
-
-/*
-// 5) johnny5 responds to name
-robot.respond(/Hi johnny5! My name is (.*)/i, function(msg) {
-     var name;
-     name = msg.match[1];
-     if (name == "johnny5"){
-       return msg.send("You're not johnny5--I'm johnny5!");
-     } else {
-       return msg.reply("Nice to meet you, " + name + "!");
-     }
-});
 
 // 6) Switch statement to cover various questions
-bot.respond(/what is your favorite (.*)/, function(msg) {
+module.exports = function(bot) {
+    bot.respond(/what is your favorite (.*)/, function(msg) {
   var fav;
   matches = msg.match;
 fav = matches[1];
@@ -67,4 +47,3 @@ fav = matches[1];
       return msg.reply("You're my favorite " + fav + ". Am I yours?");
   }
 });
-*/
