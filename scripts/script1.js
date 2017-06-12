@@ -23,28 +23,3 @@ module.exports = function(robot) {
       return res.send("It's always sunny in Philadelphia.");
     });
 }
-
-/*
-// 6) Switch statement to cover various questions
-module.exports = function(bot) {
-    bot.respond(/what is your favorite (.*)/, function(msg) {
-  var fav;
-  matches = msg.match;
-fav = matches[1];
-
-  console.log(fav);
-  switch (fav) {
-    case "color":
-      return msg.reply("Mine is gray, the color of my sleek metal exterior.");
-      break;
-    case "band":
-      return msg.reply("I would have to say cyborg https://www.youtube.com/watch?v=oHu13xU5Jx0");
-      break;
-    case "programming language":
-      return msg.reply("Javascript, of course!");
-      break;
-    default:
-      return msg.reply("You're my favorite " + fav + ". Am I yours?");
-  }
-});
-*/
