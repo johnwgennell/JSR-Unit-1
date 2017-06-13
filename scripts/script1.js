@@ -32,17 +32,6 @@ bot.respond(/Hi johnny5! My name is (.*)/i, function(msg) {
    }
  });
 
-// 6) Adding two numbers together
-bot.respond(/add (.*) and (.*)/i, function(msg) {
-  var a;
-  var b;
-  a = parseInt(msg.match[1]);
-  b = parseInt(msg.match[2]);
-  c = a + b
-
-  return msg.reply(a + " plus " + b + " = " + c);
-});
-
 
 
 }
