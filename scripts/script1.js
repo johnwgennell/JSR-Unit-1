@@ -5,17 +5,16 @@ robot.respond(/Hello|hello!|hello|Hi|hi!|hi|Hey!|Hey|hey!|hey/i, function(greeti
   return greeting.send("Hi there!");
 });
 
-robot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
-  		var name;
-  		name = msg.match[1];
-  		if (name == "Hubot"){
-    		return msg.send("You're not Hubot--I'm Hubot!");
-  		} else {
-    		return msg.reply("Nice to meet you, " + name + "!");
-  		}
-
-
-	});
+// 2) Conditional greeting and replies
+robot.respond(/Hi johnny5! My name is(.*)/i, function(msg) {
+  var name;
+  name = msg.match[1];
+  if (name == "johnny5"){
+    return msg.send("You're not johnny5, I am!");
+  } else {
+    return msg.reply("Nice to meet you, " + name + "!");
+  }
+});
 
 // 2) Hears "how is the weather" and replies
 robot.hear(/How is the weather?/, function(weather) {
