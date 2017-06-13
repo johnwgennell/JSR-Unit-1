@@ -6,7 +6,7 @@ robot.respond(/Hello|hello!|hello|Hi|hi!|hi|Hey!|Hey|hey!|hey/i, function(greeti
 });
 
 // 2) Conditional greeting and replies
-robot.respond(/Hi johnny5! My name is(.*)/i, function(msg) {
+robot.respond(/Hi johnny5! My name is (.*)/i, function(msg) {
   var name;
   name = msg.match[1];
   if (name == "johnny5"){
