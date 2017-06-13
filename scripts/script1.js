@@ -20,7 +20,7 @@ robot.hear(/Show me a picture of yourself./, function(res) {
 robot.respond(/Roll a die.|Roll a die|roll a die|Roll again.|Roll again|roll again/i, function(res) {
     var total = 0;
     total = Math.floor((Math.random() * 6) + 1);
-        return res.send("You rolled a \n " + total + "!");
+        return res.send("You rolled a " + total + "!");
 });
 
 
