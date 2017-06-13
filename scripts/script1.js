@@ -21,16 +21,18 @@ robot.hear(/Show me a picture of yourself./, function(res) {
   return res.send("This is me, in the flesh! Well, I don't actually have any flesh, but you know what I mean ;) \n " + johnny5Img);
 });
 
-// 5) Responding directly to name
-bot.respond(/Hi johnny5! My name is (.*)/i, function(msg) {
-   var name;
-   name = msg.match[1];
-   if (name == "johnny5"){
-     return msg.send("You're not johnny5, I am!");
-   } else {
-     return msg.reply("Nice to meet you, " + name + "!");
-   }
- });
+
+
+// 6) Adding two numbers together
+bot.respond(/add (.*) and (.*)/i, function(msg) {
+  var a;
+  var b;
+  a = parseInt(msg.match[1]);
+  b = parseInt(msg.match[2]);
+  c = a + b
+
+  return msg.reply(a + " plus " + b + " = " + c);
+});
 
 
 
