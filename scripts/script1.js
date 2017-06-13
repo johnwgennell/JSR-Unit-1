@@ -23,17 +23,6 @@ robot.hear(/Show me a picture of yourself./, function(res) {
 
 
 
-// 6) Adding two numbers together
-bot.respond(/add (.*) and (.*)/i, function(msg) {
-  var a;
-  var b;
-  a = parseInt(msg.match[1]);
-  b = parseInt(msg.match[2]);
-  c = a + b
-
-  return msg.reply(a + " plus " + b + " = " + c);
-});
-
 
 
 }
