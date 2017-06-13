@@ -18,15 +18,8 @@ robot.hear(/Show me a picture of yourself./, function(res) {
 
 // 4) Rolling a die on request
 robot.respond(/Roll a die.|Roll a die|roll a die|Roll again.|Roll again|roll again/i, function(res) {
-  var rollTheDice = function() {
-  var i,
-      faceValue,
-      output = '',
-      diceCount = document.querySelector('input[type=number]').value || 1;
-  for (i = 0; i < diceCount; i++) {
-      faceValue = Math.floor(Math.random() * 6);
-      output += "&#x268" + faceValue + "; ";
-    }
+    var total = 0;
+    total = Math.floor((Math.random() * 6) + 1);
         return res.send("You rolled a \n " + total + "!");
 });
 
