@@ -25,6 +25,7 @@ robot.respond(/Roll a die.|Roll a die|roll a die/i, function(res) {
       return randomNumber;
     }
   }
+  return res.send("You rolled a ;) \n " + randomNumber);
 });
 
 
