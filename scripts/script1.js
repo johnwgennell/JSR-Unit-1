@@ -5,19 +5,20 @@ module.exports = function(robot) {
       return res.send("Hi there!");
     });
 
-// 3) Hears "how is the weather" and replies
-    robot.hear(/How is the weather?/, function(res) {
-      return res.send("It's always sunny in Philadelphia.");
+// 2) johnny5 responds to various greetings (° ͜ʖ ͡°)
+    robot.respond(/Hello|hello!|hello|Hi|hi!|hi|Hey!|Hey|hey!|hey/i, function(greeting) {
+  		return greeting.send("Hi there!");
     });
 
-    // say Hello! to Kitt
-	robot.respond(/hi|hello/i, function(hi) {
-		return hi.send("Hi there!");
-	});
-	// ask Kitt "Pizza?"
-	robot.hear(/\bpizza\b/i, function(res) {
-		var donut = "https://static.simpsonswiki.com/images/thumb/9/9b/Donut.png/40px-Donut.png";
-		return res.send("No thanks. I'm full. \n " + donut);
+// 3) Hears "how is the weather" and replies
+    robot.hear(/How is the weather?/, function(weather) {
+      return weather.send("It's always sunny in Philadelphia.");
+    });
+
+// 4) Sending an image based off a request ¯\_(ツ)_/¯
+	robot.hear(/Show me a picture of yourself./, function(res) {
+		var johnny5Img = "http://vignette3.wikia.nocookie.net/robotsupremacy/images/7/7f/Johnny5-2.jpg/revision/latest?cb=20120321192157";
+		return res.send("This is me, in the flesh! Well, I don't actually have any flesh, but you know what I mean ;) \n " + johnny5Img);
 	});
 
 
