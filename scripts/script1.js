@@ -17,12 +17,10 @@ robot.hear(/Show me a picture of yourself./, function(res) {
 });
 
 // 4) Rolling a die on request
-robot.respond(/Roll a die.|Roll a die|roll a die/i, function(res) {
-  function rollDie () {
+robot.respond(/Roll a die.|Roll a die|roll a die|Roll again.|Roll again|roll again/i, function(res) {
     var total = 0;
     total = Math.floor((Math.random() * 6) + 1);
         return res.send("You rolled a ;) \n " + total + "!");
-  }
 });
 
 
