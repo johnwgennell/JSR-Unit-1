@@ -21,7 +21,7 @@ robot.hear(/How is the weather?/, function(weather) {
   return weather.send("It's always sunny in Philadelphia.");
 });
 
-// 4) Sending an image based off a request ¯\_(ツ)_/¯
+// 4) Sending an image based off a request
 robot.hear(/Show me a picture of yourself./, function(res) {
   var johnny5Img = "http://vignette3.wikia.nocookie.net/robotsupremacy/images/7/7f/Johnny5-2.jpg/revision/latest?cb=20120321192157";
   return res.send("This is me, in the flesh! Well, I don't actually have any flesh, but you know what I mean ;) \n " + johnny5Img);
@@ -34,6 +34,47 @@ robot.respond(/Roll a die.|Roll a die|roll a die|Roll again.|Roll again|roll aga
         return res.send("You rolled a " + total + "!");
 });
 
+// 6) Direct message the owners of all the bots
+bot.respond(/DM Scott|Dm scott/, function(msg) {
+    var name = '@scobban';
+    bot.messageRoom(name, "What's up, Scott? How is Kitt?" ;
+});
 
+bot.respond(/DM Michael|Dm michael/, function(msg) {
+    var name = '@myounkie';
+    bot.messageRoom(name, "What's up, Michael? How is R2-D2?" ;
+});
+
+bot.respond(/DM Tristan|Dm tristan/, function(msg) {
+    var name = '@tcooper';
+    bot.messageRoom(name, "What's up, Tristan? How is HAL?" ;
+});
+
+bot.respond(/DM Oliver|Dm oliver/, function(msg) {
+    var name = '@oli-g';
+    bot.messageRoom(name, "What's up, Oliver? How is Walle?" ;
+});
+
+bot.respond(/DM Trevor|Dm trevor/, function(msg) {
+    var name = '@albrechs';
+    bot.messageRoom(name, "What's up, Trevor? How is RoboCop?" ;
+});
+
+bot.respond(/DM Erica!|Dm erica/, function(msg) {
+    var name = '@erica';
+    bot.messageRoom(name, "What's up, Erica? How is Bender?";
+});
+
+
+bot.respond(/DM Alex|Dm alex/, function(msg) {
+    var name = '@alabianca';
+    bot.messageRoom(name, "What's up, Alex? How is Rosie?";
+});
+
+// For testing DM'ing
+bot.respond(/DM John|Dm john/, function(msg) {
+    var name = '@jgennell';
+    bot.messageRoom(name, "What's up, John? I just noticed we have similar names!";
+});
 
 }
